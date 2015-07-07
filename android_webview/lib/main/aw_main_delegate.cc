@@ -58,7 +58,9 @@ bool AwMainDelegate::BasicStartupComplete(int* exit_code) {
 
   CommandLine* cl = CommandLine::ForCurrentProcess();
   cl->AppendSwitch(switches::kEnableBeginFrameScheduling);
+#if 0
   cl->AppendSwitch(cc::switches::kEnableMapImage);
+#endif
 
   // Disable GLSL translator. Webview is single-process so has no benefit.
   cl->AppendSwitch(switches::kDisableGLSLTranslator);
